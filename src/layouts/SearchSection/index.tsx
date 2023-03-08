@@ -9,7 +9,9 @@ export const SearchSection: FC = () => {
   return (
     <>
       <section className="top-container">
-        <div className="title">Busque um filme</div>
+        <div className="title">
+          <h1>Busque um filme</h1>
+        </div>
         <div className="description">
           Seus filmes preferidos estão aqui, na NTT Data.Movies
         </div>

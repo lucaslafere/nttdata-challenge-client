@@ -14,6 +14,7 @@ export const FavoriteButton: FC = ({}) => {
           setPressed(false);
         }}
         design="Default"
+        style={{ width: "100%" }}
       >
         Favorited
       </ToggleButton>
@@ -27,6 +28,7 @@ export const FavoriteButton: FC = ({}) => {
       onClick={function ka() {
         setPressed(true);
       }}
+      style={{ width: "100%" }}
     >
       Favorite
     </ToggleButton>

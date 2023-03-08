@@ -9,11 +9,21 @@ export const MovieSection: FC = () => {
   return (
     <div className="main-container">
       <div className="movie-details-container">
-        <div className="movie-title">Movie Title</div>
+        <div className="movie-title">
+          <h2>Movie Title</h2>
+        </div>
         <div className="movie-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt cumque,
+          voluptate tempora neque doloremque, eligendi a enim, distinctio eos
+          dicta quod ipsa quos aliquid. Nobis optio autem minus aperiam.
+          Consectetur.
+        </div>
+        <div className="movie-actor">
+          <h3>Actors: </h3>
+          <p> Actor 1, Actor 2, Actor 3</p>
         </div>
         <div className="movie-rating">
+          <h3>Review</h3>
           <Rating
             rating={rating}
             setRating={setRating}
