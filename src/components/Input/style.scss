@@ -1,0 +1,17 @@
+@import "../../scss/_reset.scss";
+@import "../../scss/variables.scss";
+.input-field {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  color: black;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  :hover {
+    border: 1px solid $orange;
+  }
+  :focus {
+    border: 1px solid $orange;
+  }
+}
