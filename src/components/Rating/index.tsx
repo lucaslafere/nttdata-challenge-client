@@ -3,13 +3,14 @@ import { FC } from "react";
 import "./style.scss";
 
 interface iProps {
-  value: number;
+  rating: number;
+  setRating: (rating: number) => void;
 }
 
-export const Rating: FC<iProps> = ({ value }) => {
+export const Rating: FC<iProps> = ({ rating }) => {
   return (
     <RatingIndicator
-      value={value}
+      value={rating}
       readonly={true}
     />
   );
