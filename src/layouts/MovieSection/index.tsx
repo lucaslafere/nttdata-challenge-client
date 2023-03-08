@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import FavoriteButton from "../../components/FavoriteButton";
 import Rating from "../../components/Rating";
+import "./style.scss";
 
 export const MovieSection: FC = () => {
   const [rating, setRating] = useState(3);
@@ -21,8 +22,8 @@ export const MovieSection: FC = () => {
         <div className="movie-favorite">
           <FavoriteButton />
         </div>
-        <div className="movie-poster"></div>
       </div>
+      <div className="movie-poster">Placeholder for an image</div>
     </div>
   );
 };
