@@ -1,7 +1,7 @@
-import { Button } from "@ui5/webcomponents-react"; // loads ui5-button wrapped in a ui5-webcomponents-react component
+import ClickableButton from "./components/Button";
 
 function App() {
-  return <Button onClick={() => alert("Hello World!")}>Hello world!</Button>;
+  return <ClickableButton>How it Works?</ClickableButton>;
 }
 
 export default App;
