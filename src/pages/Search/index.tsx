@@ -12,7 +12,7 @@ export const Search: FC = () => {
 
   return (
     <>
-      <header className="header"></header>
+      <header className="header">NTT Data Movies</header>
       <section className="top-container">
         <div className="search-container">
           <InputField
