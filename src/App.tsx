@@ -1,5 +1,11 @@
+import Search from "./pages/Search";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Search />
+    </>
+  );
 }
 
 export default App;
