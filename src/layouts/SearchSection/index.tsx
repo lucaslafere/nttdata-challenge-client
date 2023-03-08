@@ -5,12 +5,9 @@ import "./style.scss";
 
 export const SearchSection: FC = () => {
   const [search, setSearch] = useState("");
-  const [rating, setRating] = useState(0);
-  const [favorite, setFavorite] = useState(false);
 
   return (
     <>
-      <header className="header">NTT Data.Movies</header>
       <section className="top-container">
         <div className="title">Busque um filme</div>
         <div className="description">
@@ -29,7 +26,6 @@ export const SearchSection: FC = () => {
           </div>
         </div>
       </section>
-      <footer className="footer"></footer>
     </>
   );
 };

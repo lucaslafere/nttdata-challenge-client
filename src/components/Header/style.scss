@@ -1,0 +1,18 @@
+@import "../../scss/_reset.scss";
+@import "../../scss/variables.scss";
+
+.header {
+  width: 100vw;
+  min-height: 90px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+  display: flex;
+  align-items: center;
+  justify-content: Center;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: $orange;
+  color: white;
+  font-family: $main-font;
+}
