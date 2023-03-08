@@ -1,6 +1,5 @@
 import { ToggleButton } from "@ui5/webcomponents-react";
 import { FC, useState } from "react";
-import "./style.scss";
 
 export const FavoriteButton: FC = ({}) => {
   const [pressed, setPressed] = useState(false);
@@ -14,7 +13,7 @@ export const FavoriteButton: FC = ({}) => {
           setPressed(false);
         }}
         design="Default"
-        style={{ width: "100%" }}
+        style={{ width: "60%", height: "60px" }}
       >
         Favorited
       </ToggleButton>
@@ -28,7 +27,7 @@ export const FavoriteButton: FC = ({}) => {
       onClick={function ka() {
         setPressed(true);
       }}
-      style={{ width: "100%" }}
+      style={{ width: "60%", height: "60px" }}
     >
       Favorite
     </ToggleButton>

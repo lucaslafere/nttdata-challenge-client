@@ -16,7 +16,14 @@ export const MovieSection: FC = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt cumque,
           voluptate tempora neque doloremque, eligendi a enim, distinctio eos
           dicta quod ipsa quos aliquid. Nobis optio autem minus aperiam.
-          Consectetur.
+          Consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Adipisci, ducimus quaerat soluta quia enim et ea saepe aliquid eos
+          consequuntur laboriosam reprehenderit blanditiis ipsam minus
+          exercitationem quasi porro, tempora fugiat. Lorem ipsum dolor sit
+          amet, consectetur adipisicing elit. Quos temporibus porro veritatis,
+          eveniet nemo voluptate vel. Deserunt fugiat consectetur deleniti neque
+          consequatur recusandae hic minima id excepturi dicta, officiis
+          provident.
         </div>
         <div className="movie-actor">
           <h3>Actors: </h3>
