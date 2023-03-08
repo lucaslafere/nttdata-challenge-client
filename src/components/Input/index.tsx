@@ -13,7 +13,7 @@ export const InputField: FC<iProps> = ({ value }) => {
     <Input
       value={value}
       className="input-field"
-      placeholder="Type the movie's name here"
+      placeholder="Type your favorite movie's name here"
     />
   );
 };
