@@ -1,9 +1,9 @@
-import Search from "./pages/Search";
+import SearchPage from "./pages/Search";
 
 function App() {
   return (
     <>
-      <Search />
+      <SearchPage />
     </>
   );
 }
