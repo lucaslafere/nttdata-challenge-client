@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import ClickableButton from "../../components/Button";
 import FavoriteButton from "../../components/FavoriteButton";
-import InputField from "../../components/InputField";
+import InputField from "../../components/Input";
 import Rating from "../../components/Rating";
 import "./style.scss";
 
@@ -13,6 +13,16 @@ export const Search: FC = () => {
   return (
     <>
       <header className="header"></header>
+      <section className="top-container">
+        <div className="search-container">
+          <InputField
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <ClickableButton>Search</ClickableButton>
+          <ClickableButton>Reset</ClickableButton>
+        </div>
+      </section>
       <footer className="footer"></footer>
     </>
   );

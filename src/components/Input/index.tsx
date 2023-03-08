@@ -5,6 +5,7 @@ import "./style.scss";
 interface iProps {
   children?: string;
   value: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const InputField: FC<iProps> = ({ value }) => {
