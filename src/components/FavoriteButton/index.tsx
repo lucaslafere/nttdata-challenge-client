@@ -1,33 +1,32 @@
 import { ToggleButton } from "@ui5/webcomponents-react";
-import { FC } from "react";
+import { FC, useState } from "react";
 import "./style.scss";
 
-interface iProps {
-  pressed: boolean;
-}
+export const FavoriteButton: FC = ({}) => {
+  const [pressed, setPressed] = useState(false);
 
-export const FavoriteButton: FC<iProps> = ({ pressed }) => {
   if (pressed) {
     return (
       <ToggleButton
-        icon="add"
-        iconEnd={true}
-        onClick={function ka() {}}
-        pressed={pressed}
-        design="Negative"
-        style={{ width: "100%" }}
+        icon="favorite"
+        iconEnd
+        onClick={function ka() {
+          setPressed(false);
+        }}
+        design="Default"
       >
-        Favorite
+        Favorited
       </ToggleButton>
     );
   }
   return (
     <ToggleButton
-      icon="add"
-      iconEnd={true}
-      onClick={function ka() {}}
-      pressed={pressed}
-      style={{ width: "100%" }}
+      icon="favorite"
+      design="Negative"
+      iconEnd
+      onClick={function ka() {
+        setPressed(true);
+      }}
     >
       Favorite
     </ToggleButton>
