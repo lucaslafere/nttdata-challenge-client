@@ -1,12 +1,14 @@
-import { FC, useContext } from "react";
+import { FC } from "react";
 import FavoriteButton from "../../components/FavoriteButton";
 import Rating from "../../components/Rating";
-import MovieContext from "../../contexts/movieContext";
+import { useAppSelector } from "../../hooks/reduxHooks";
+import { RootState } from "../../store/store";
 import "./style.scss";
 
 export const MovieSection: FC = () => {
-  const { title, plot, poster, actors, rating } =
-    useContext(MovieContext).movie;
+  const { title, plot, poster, actors, rating } = useAppSelector(
+    (state: RootState) => state.movies.movie
+  );
 
   return (
     <div className="main-container">

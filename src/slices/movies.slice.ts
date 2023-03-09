@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface Movie {
+export interface Movie {
   title: string;
   plot: string;
   actors: string;

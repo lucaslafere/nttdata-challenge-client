@@ -1,21 +1,20 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import ClickableButton from "../../components/Button";
 import InputField from "../../components/Input";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
 import api from "../../services/api";
 import { Movie, setMovie } from "../../slices/movies.slice";
-import { search, setSearch } from "../../slices/search.slice";
+import { setSearch } from "../../slices/search.slice";
 import { RootState } from "../../store/store";
 import "./style.scss";
 
 export const SearchSection: FC = () => {
   const dispatch = useAppDispatch();
-  const movie = useAppSelector((state: RootState) => state.movies.movie);
+  const search = useAppSelector((state: RootState) => state.search.search);
   async function handleSearch(search: string) {
     api
       .get(`/${search}`)
       .then((response) => {
-        console.log(response);
         const updatedMovie: Movie = {
           title: response.data.title,
           plot: response.data.plot,
@@ -31,14 +30,16 @@ export const SearchSection: FC = () => {
       });
   }
   function resetSearch() {
-    setSearch("");
-    setMovie({
-      title: "",
-      plot: "",
-      poster: "",
-      actors: "",
-      rating: 0,
-    });
+    dispatch(setSearch(""));
+    dispatch(
+      setMovie({
+        title: "",
+        plot: "",
+        poster: "",
+        actors: "",
+        rating: 0,
+      })
+    );
   }
   return (
     <>

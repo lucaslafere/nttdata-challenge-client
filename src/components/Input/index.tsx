@@ -1,6 +1,8 @@
 import { Input } from "@ui5/webcomponents-react";
-import { FC, useContext } from "react";
-import SearchContext from "../../contexts/searchContext";
+import { FC } from "react";
+import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
+import { setSearch } from "../../slices/search.slice";
+import { RootState } from "../../store/store";
 import "./style.scss";
 
 interface iProps {
@@ -8,9 +10,10 @@ interface iProps {
 }
 
 export const InputField: FC<iProps> = () => {
-  const { search, setSearch } = useContext(SearchContext);
+  const { search } = useAppSelector((state: RootState) => state.search);
+  const dispatch = useAppDispatch();
   const handleSearch = (e: any) => {
-    setSearch(e.target.value);
+    dispatch(setSearch(e.target.value));
   };
   return (
     <Input
