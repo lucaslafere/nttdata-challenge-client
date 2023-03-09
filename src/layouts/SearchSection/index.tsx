@@ -6,7 +6,6 @@ import "./style.scss";
 
 export const SearchSection: FC = () => {
   const { search, setSearch } = useContext(SearchContext);
-
   return (
     <>
       <section className="top-container">
@@ -18,10 +17,7 @@ export const SearchSection: FC = () => {
         </div>
         <div className="search-container">
           <div className="input-container">
-            <InputField
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
+            <InputField value={search} />
           </div>
           <div className="buttons-container">
             <ClickableButton>Search</ClickableButton>

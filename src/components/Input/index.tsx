@@ -1,19 +1,26 @@
 import { Input } from "@ui5/webcomponents-react";
-import { FC } from "react";
+import { FC, useContext } from "react";
+import SearchContext from "../../contexts/searchContext";
 import "./style.scss";
 
 interface iProps {
-  children?: string;
   value: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const InputField: FC<iProps> = ({ value }) => {
+export const InputField: FC<iProps> = () => {
+  const { search, setSearch } = useContext(SearchContext);
+  console.log(search);
+
+  const handleSearch = (e: any) => {
+    setSearch(e.target.value);
+  };
   return (
     <Input
-      value={value}
+      value={search}
       className="input-field"
       placeholder="Type your favorite movie's name here"
+      onChange={(e) => handleSearch(e)}
     />
   );
 };
