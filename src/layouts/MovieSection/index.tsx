@@ -15,7 +15,7 @@ export const MovieSection: FC = () => {
           <h2>{title ? title : "No Title available"}</h2>
         </div>
         <div className="movie-description">
-          {plot ? plot : "No plot available"}
+          <p>{plot ? plot : "No plot available"}</p>
         </div>
         <div className="movie-actor">
           <h3>Actors: </h3>
@@ -30,7 +30,20 @@ export const MovieSection: FC = () => {
         </div>
       </div>
       <div className="movie-poster">
-        {poster ? poster : "No image available"}
+        {poster ? (
+          <img src={poster} />
+        ) : (
+          <>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"
+              alt="Placeholder Image"
+            />
+            <p>
+              No poster available. This is a placeholder. Try searching a
+              different movie.
+            </p>
+          </>
+        )}
       </div>
     </div>
   );
