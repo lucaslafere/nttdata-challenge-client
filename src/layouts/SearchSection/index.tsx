@@ -1,26 +1,30 @@
-import { FC, useContext } from "react";
+import { FC, useState } from "react";
 import ClickableButton from "../../components/Button";
 import InputField from "../../components/Input";
-import MovieContext from "../../contexts/movieContext";
-import SearchContext from "../../contexts/searchContext";
+import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
 import api from "../../services/api";
+import { Movie, setMovie } from "../../slices/movies.slice";
+import { search, setSearch } from "../../slices/search.slice";
+import { RootState } from "../../store/store";
 import "./style.scss";
 
 export const SearchSection: FC = () => {
-  const { setSearch, search } = useContext(SearchContext);
-  const { setMovie } = useContext(MovieContext);
-  function getMovie(search: string) {
+  const dispatch = useAppDispatch();
+  const movie = useAppSelector((state: RootState) => state.movies.movie);
+  async function handleSearch(search: string) {
     api
       .get(`/${search}`)
       .then((response) => {
         console.log(response);
-        setMovie({
+        const updatedMovie: Movie = {
           title: response.data.title,
           plot: response.data.plot,
           poster: response.data.poster,
           actors: response.data.actors,
           rating: response.data.review,
-        });
+        };
+        dispatch(setMovie(updatedMovie));
+        dispatch(setSearch(search));
       })
       .catch((error) => {
         console.log("Error processing your request:" + error.message);
@@ -50,7 +54,7 @@ export const SearchSection: FC = () => {
             <InputField />
           </div>
           <div className="buttons-container">
-            <ClickableButton onClick={() => getMovie(search)}>
+            <ClickableButton onClick={() => handleSearch(search)}>
               Search
             </ClickableButton>
             <ClickableButton onClick={() => resetSearch()}>
