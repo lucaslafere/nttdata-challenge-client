@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import ClickableButton from "../../components/Button";
 import InputField from "../../components/Input";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
@@ -9,9 +9,12 @@ import { RootState } from "../../store/store";
 import "./style.scss";
 
 export const SearchSection: FC = () => {
+  const [loading, setLoading] = useState(false);
+
   const dispatch = useAppDispatch();
   const search = useAppSelector((state: RootState) => state.search.search);
   async function handleSearch(search: string) {
+    setLoading(true);
     api
       .get(`/${search}`)
       .then((response) => {
@@ -24,8 +27,10 @@ export const SearchSection: FC = () => {
         };
         dispatch(setMovie(updatedMovie));
         dispatch(setSearch(search));
+        setLoading(false);
       })
       .catch((error) => {
+        setLoading(false);
         console.log("Error processing your request:" + error.message);
       });
   }
@@ -55,10 +60,16 @@ export const SearchSection: FC = () => {
             <InputField />
           </div>
           <div className="buttons-container">
-            <ClickableButton onClick={() => handleSearch(search)}>
+            <ClickableButton
+              disabled={loading}
+              onClick={() => handleSearch(search)}
+            >
               Search
             </ClickableButton>
-            <ClickableButton onClick={() => resetSearch()}>
+            <ClickableButton
+              disabled={loading}
+              onClick={() => resetSearch()}
+            >
               Reset
             </ClickableButton>
           </div>

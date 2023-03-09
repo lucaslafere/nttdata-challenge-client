@@ -5,13 +5,19 @@ import "./style.scss";
 interface iProps {
   children: string;
   onClick: () => void;
+  disabled?: boolean;
 }
 
-export const ClickableButton: FC<iProps> = ({ children, onClick }) => {
+export const ClickableButton: FC<iProps> = ({
+  children,
+  onClick,
+  disabled,
+}) => {
   return (
     <Button
       className="orange-button"
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </Button>
