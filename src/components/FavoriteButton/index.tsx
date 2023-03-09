@@ -3,6 +3,9 @@ import { FC, useState } from "react";
 
 export const FavoriteButton: FC = ({}) => {
   const [pressed, setPressed] = useState(false);
+  // we'll use something like this to get the favorited state from session storage:
+  // const [title, setTitle] = useLocalStorage(movie.title, false);
+  // setTitle(true) // to set the value to true
 
   if (pressed) {
     return (
