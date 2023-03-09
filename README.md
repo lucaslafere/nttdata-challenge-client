@@ -29,8 +29,6 @@ NTT Data Movies is a small project aimed towards consuming an API, to retrieve d
 
 This project was initialized with [Create React App](https://github.com/facebook/create-react-app), so make sure you've got the latest stable version of both [Node.js](https://nodejs.org/en/download/) and [npm](https://www.npmjs.com/) running locally.
 
-For easier testing, you can just try out the latest deployed version by clicking [here](https://nttdata-challenge-client.vercel.app/). If you want to test it locally, keep reading:
-
 First, clone this repository in your machine:
 
 ```
