@@ -9,8 +9,6 @@ interface iProps {
 
 export const InputField: FC<iProps> = () => {
   const { search, setSearch } = useContext(SearchContext);
-  console.log(search);
-
   const handleSearch = (e: any) => {
     setSearch(e.target.value);
   };

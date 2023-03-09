@@ -8,9 +8,8 @@ import "./style.scss";
 
 export const SearchSection: FC = () => {
   const { setSearch, search } = useContext(SearchContext);
-  const { setMovie, movie } = useContext(MovieContext);
+  const { setMovie } = useContext(MovieContext);
   function getMovie(search: string) {
-    console.log(search);
     api
       .get(`/${search}`)
       .then((response) => {
