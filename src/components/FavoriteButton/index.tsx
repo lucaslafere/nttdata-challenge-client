@@ -20,7 +20,7 @@ export const FavoriteButton: FC = () => {
         design="Negative"
         className="toggle-button"
       >
-        Favorited
+        Favorited!
       </ToggleButton>
     );
   }
