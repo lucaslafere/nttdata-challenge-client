@@ -1,11 +1,9 @@
-import { FC, useContext } from "react";
+import { FC } from "react";
 import ClickableButton from "../../components/Button";
 import InputField from "../../components/Input";
-import SearchContext from "../../contexts/searchContext";
 import "./style.scss";
 
 export const SearchSection: FC = () => {
-  const { search, setSearch } = useContext(SearchContext);
   return (
     <>
       <section className="top-container">
@@ -17,7 +15,7 @@ export const SearchSection: FC = () => {
         </div>
         <div className="search-container">
           <div className="input-container">
-            <InputField value={search} />
+            <InputField />
           </div>
           <div className="buttons-container">
             <ClickableButton>Search</ClickableButton>

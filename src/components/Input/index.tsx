@@ -4,7 +4,6 @@ import SearchContext from "../../contexts/searchContext";
 import "./style.scss";
 
 interface iProps {
-  value: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
