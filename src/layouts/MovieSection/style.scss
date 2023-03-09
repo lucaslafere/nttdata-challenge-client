@@ -23,6 +23,13 @@
     font-weight: 400;
     font-family: $main-font;
   }
+  //create a media query for mobile users that changes to column
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
 }
 .movie-details-container {
   width: 80%;
@@ -31,6 +38,15 @@
   align-items: flex-start;
   justify-content: center;
   gap: 20px;
+}
+.movie-title {
+  //center the title on mobile
+  @media (max-width: 768px) {
+    width: 100%;
+    h2 {
+      text-align: center;
+    }
+  }
 }
 .movie-actor {
   display: flex;
@@ -47,7 +63,7 @@
 .movie-favorite {
   width: 60%;
 }
-.movie-poster {
+.desktop-movie-poster {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,5 +81,32 @@
   }
   p {
     padding: 12px;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.mobile-movie-poster {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    img:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: all 0.2s ease-in-out;
+    }
+    p {
+      padding: 12px;
+    }
   }
 }

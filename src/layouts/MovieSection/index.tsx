@@ -13,6 +13,22 @@ export const MovieSection: FC = () => {
   return (
     <div className="main-container">
       <div className="movie-details-container">
+        <div className="mobile-movie-poster">
+          {poster ? (
+            <img src={poster} />
+          ) : (
+            <>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"
+                alt="Placeholder Image"
+              />
+              <p>
+                No poster available. This is a placeholder. Try searching a
+                different movie.
+              </p>
+            </>
+          )}
+        </div>
         <div className="movie-title">
           <h2>{title ? title : "No Title available"}</h2>
         </div>
@@ -31,7 +47,7 @@ export const MovieSection: FC = () => {
           <FavoriteButton />
         </div>
       </div>
-      <div className="movie-poster">
+      <div className="desktop-movie-poster">
         {poster ? (
           <img src={poster} />
         ) : (
