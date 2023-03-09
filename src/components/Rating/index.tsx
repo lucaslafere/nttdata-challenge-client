@@ -4,7 +4,6 @@ import "./style.scss";
 
 interface iProps {
   rating: number;
-  setRating: (rating: number) => void;
 }
 
 export const Rating: FC<iProps> = ({ rating }) => {

@@ -3,7 +3,13 @@
 import { createContext } from "react";
 
 const MovieContext = createContext({
-  movie: {},
+  movie: {
+    title: "",
+    plot: "",
+    actors: "",
+    poster: "",
+    rating: 0,
+  },
   setMovie: (movie: any) => {},
 });
 

@@ -2,13 +2,11 @@ import { FC, useContext } from "react";
 import ClickableButton from "../../components/Button";
 import InputField from "../../components/Input";
 import SearchContext from "../../contexts/searchContext";
+import getMovie from "../../services/getMovie";
+
 import "./style.scss";
 
 export const SearchSection: FC = () => {
-  const getMovie = () => {
-    console.log("getMovie");
-  };
-
   const { setSearch } = useContext(SearchContext);
   return (
     <>
