@@ -13,7 +13,26 @@
 
 NTT Data Movies is a small project aimed towards consuming an API, to retrieve data from movies listed on a 3rd party API, using my own API, which is in another repository.
 
----
+## How does it work? Step-by-step (with screenshots)
+
+### This is the default view you get when opening the app:
+
+<br>
+
+## ![default view](/public/default-view.jpeg)
+
+<br>
+
+### After that, simply search a movie in the input field provided, an click the Search button, which will get you some info:
+
+<br>
+
+![desktop search](/public/desktop-search.jpeg)
+
+### You can also use it on mobile, which looks like this:
+
+![mobile search](/public/mobile-search.jpeg)
+![mobile body](/public//mobile-search-2.jpeg)
 
 ## :computer: Technologies and Concepts
 
