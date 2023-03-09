@@ -1,3 +1,4 @@
+import "@ui5/webcomponents-icons/dist/AllIcons.js";
 import { ToggleButton } from "@ui5/webcomponents-react";
 import { FC, useState } from "react";
 import "./style.scss";
@@ -11,12 +12,12 @@ export const FavoriteButton: FC = () => {
   if (pressed) {
     return (
       <ToggleButton
-        icon="favorite"
+        icon="heart"
         iconEnd
         onClick={function ka() {
           setPressed(false);
         }}
-        design="Default"
+        design="Negative"
         className="toggle-button"
       >
         Favorited
@@ -25,8 +26,8 @@ export const FavoriteButton: FC = () => {
   }
   return (
     <ToggleButton
-      icon="favorite"
-      design="Negative"
+      icon="heart"
+      design="Default"
       iconEnd
       onClick={function ka() {
         setPressed(true);

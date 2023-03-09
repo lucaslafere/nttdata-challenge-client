@@ -1,3 +1,4 @@
+import "@ui5/webcomponents-icons/dist/AllIcons.js";
 import { FC, useState } from "react";
 import ClickableButton from "../../components/Button";
 import InputField from "../../components/Input";
@@ -63,12 +64,14 @@ export const SearchSection: FC = () => {
             <ClickableButton
               disabled={loading}
               onClick={() => handleSearch(search)}
+              icon="search"
             >
               Search
             </ClickableButton>
             <ClickableButton
               disabled={loading}
               onClick={() => resetSearch()}
+              icon="reset"
             >
               Reset
             </ClickableButton>
