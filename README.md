@@ -49,4 +49,4 @@ When finished, just start the server, using the following command:
 npm run start
 ```
 
-:stop_sign: Don't forget to follow the steps mentioned above with the back-end [repository](https://github.com/lucaslafere/nttdata-challenge-server) if you want to run the API locally.
+## :stop_sign: Don't forget to follow the steps mentioned above with the back-end [repository](https://github.com/lucaslafere/nttdata-challenge-server) to run the API locally, so you can get the full experience.
