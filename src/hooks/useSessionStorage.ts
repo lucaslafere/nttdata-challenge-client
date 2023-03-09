@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
-function getSavedValue(key, initialValue) {
-  const savedValue = JSON.parse(sessionStorage.getItem(key));
+type InitialValueType<T> = T | (() => T);
+
+function getSavedValue<T>(key: string, initialValue: InitialValueType<T>): T {
+  const savedValue = JSON.parse(sessionStorage.getItem(key) as string);
   if (savedValue) return savedValue;
 
   if (initialValue instanceof Function) return initialValue();
@@ -9,14 +11,17 @@ function getSavedValue(key, initialValue) {
   return initialValue;
 }
 
-export default function usesessionStorage(key, initialValue) {
-  const [value, setValue] = useState(() => {
-    return getSavedValue(key, initialValue);
+export default function useSessionStorage<T>(
+  key: string,
+  initialValue: InitialValueType<T>
+) {
+  const [value, setValue] = useState<T>(() => {
+    return getSavedValue<T>(key, initialValue);
   });
 
   useEffect(() => {
     sessionStorage.setItem(key, JSON.stringify(value));
-  }, [value]);
+  }, [value, key]);
 
-  return [value, setValue];
+  return [value, setValue] as const;
 }
