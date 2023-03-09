@@ -41,6 +41,7 @@ NTT Data Movies is a small project aimed towards consuming an API, to retrieve d
 </details>
 
 <br>
+
 ## :computer: Technologies and Concepts
 
 - React
