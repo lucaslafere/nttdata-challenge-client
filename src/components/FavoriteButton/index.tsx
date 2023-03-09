@@ -11,31 +11,51 @@ export const FavoriteButton: FC = () => {
 
   if (pressed) {
     return (
-      <ToggleButton
-        icon="heart"
-        iconEnd
-        onClick={function ka() {
-          setPressed(false);
-        }}
-        design="Negative"
-        className="toggle-button"
-      >
-        Favorited!
-      </ToggleButton>
+      <>
+        <ToggleButton
+          icon="heart"
+          iconEnd
+          onClick={function ka() {
+            setPressed(false);
+          }}
+          design="Negative"
+          className="toggle-button"
+        >
+          Favorited!
+        </ToggleButton>
+        <ToggleButton
+          icon="heart"
+          onClick={function ka() {
+            setPressed(false);
+          }}
+          design="Negative"
+          className="mobile-toggle-button"
+        ></ToggleButton>
+      </>
     );
   }
   return (
-    <ToggleButton
-      icon="heart"
-      design="Default"
-      iconEnd
-      onClick={function ka() {
-        setPressed(true);
-      }}
-      className="toggle-button"
-    >
-      Favorite
-    </ToggleButton>
+    <>
+      <ToggleButton
+        icon="heart"
+        design="Default"
+        iconEnd
+        onClick={function ka() {
+          setPressed(true);
+        }}
+        className="toggle-button"
+      >
+        Favorite
+      </ToggleButton>
+      <ToggleButton
+        icon="heart"
+        design="Default"
+        onClick={function ka() {
+          setPressed(true);
+        }}
+        className="mobile-toggle-button"
+      ></ToggleButton>
+    </>
   );
 };
 
