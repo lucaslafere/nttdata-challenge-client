@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+# <p align = "center"> NTT Data Movies </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/72531277/178094665-f46c6a55-c821-42a0-bb9c-d5dd5f2d69fa.png"/>
+</p>
 
-## Available Scripts
+<p align = "center">
+   <img src="https://img.shields.io/badge/author-lucaslafere-4dae71?style=flat-square" />
+   <img src="https://img.shields.io/github/languages/count/lucaslafere/portfol-yourself-front?color=4dae71&style=flat-square" />
+</p>
 
-In the project directory, you can run:
+## :clipboard: Description
 
-### `npm start`
+NTT Data Movies is a small project aimed towards consuming an API, to retrieve data from movies listed on a 3rd party API, using my own API, which is in another repository.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## :computer: Technologies and Concepts
 
-### `npm test`
+- React
+- Redux
+- UI5 Web Components
+- SCSS
+- User-friendly UI
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🏁 Running the app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project was initialized with [Create React App](https://github.com/facebook/create-react-app), so make sure you've got the latest stable version of both [Node.js](https://nodejs.org/en/download/) and [npm](https://www.npmjs.com/) running locally.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For easier testing, you can just try out the latest deployed version by clicking [here](https://nttdata-challenge-client.vercel.app/). If you want to test it locally, keep reading:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+First, clone this repository in your machine:
 
-### `npm run eject`
+```
+git clone https://github.com/lucaslafere/nttdata-challenge-client
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Then, inside the cloned folder, run the following command to install the dependencies:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Then, create a .env file in the root folder, the same directory as the ".env.example" file. Use it to setup your API URL, which I provided in .env.example for the sake of easier testing.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+When finished, just start the server, using the following command:
 
-## Learn More
+```
+npm run start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+:stop_sign: Don't forget to follow the steps mentioned above with the back-end [repository](https://github.com/lucaslafere/nttdata-challenge-server) if you want to run the API locally.
