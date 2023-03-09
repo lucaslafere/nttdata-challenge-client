@@ -8,7 +8,7 @@ import "./style.scss";
 
 export const SearchSection: FC = () => {
   const { setSearch, search } = useContext(SearchContext);
-  const { setMovie } = useContext(MovieContext);
+  const { setMovie, movie } = useContext(MovieContext);
   function getMovie(search: string) {
     console.log(search);
     api
@@ -27,6 +27,16 @@ export const SearchSection: FC = () => {
         console.log("Error processing your request:" + error.message);
       });
   }
+  function resetSearch() {
+    setSearch("");
+    setMovie({
+      title: "",
+      plot: "",
+      poster: "",
+      actors: "",
+      rating: 0,
+    });
+  }
   return (
     <>
       <section className="top-container">
@@ -44,7 +54,7 @@ export const SearchSection: FC = () => {
             <ClickableButton onClick={() => getMovie(search)}>
               Search
             </ClickableButton>
-            <ClickableButton onClick={() => setSearch("")}>
+            <ClickableButton onClick={() => resetSearch()}>
               Reset
             </ClickableButton>
           </div>
