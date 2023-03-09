@@ -15,6 +15,10 @@ NTT Data Movies is a small project aimed towards consuming an API, to retrieve d
 
 ## How does it work? Step-by-step (with screenshots)
 
+<br>
+<details>
+  <summary>Click here to show the screenshots!</summary>
+
 ### This is the default view you get when opening the app:
 
 <br>
@@ -34,6 +38,9 @@ NTT Data Movies is a small project aimed towards consuming an API, to retrieve d
 ![mobile search](/public/mobile-search.jpeg)
 ![mobile body](/public//mobile-search-2.jpeg)
 
+</details>
+
+<br>
 ## :computer: Technologies and Concepts
 
 - React
