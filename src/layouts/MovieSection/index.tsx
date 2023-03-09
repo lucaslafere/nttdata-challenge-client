@@ -6,6 +6,9 @@ import "./style.scss";
 export const MovieSection: FC = () => {
   const [rating, setRating] = useState(3);
   const [favorite, setFavorite] = useState(false);
+  // we'll use something like this to get the favorited state from session storage:
+  // const [title, setTitle] = useLocalStorage(movie.title, false);
+  // setTitle(true) // to set the value to true
   return (
     <div className="main-container">
       <div className="movie-details-container">
