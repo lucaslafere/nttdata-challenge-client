@@ -1,9 +1,15 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import ClickableButton from "../../components/Button";
 import InputField from "../../components/Input";
+import SearchContext from "../../contexts/searchContext";
 import "./style.scss";
 
 export const SearchSection: FC = () => {
+  const getMovie = () => {
+    console.log("getMovie");
+  };
+
+  const { setSearch } = useContext(SearchContext);
   return (
     <>
       <section className="top-container">
@@ -18,8 +24,10 @@ export const SearchSection: FC = () => {
             <InputField />
           </div>
           <div className="buttons-container">
-            <ClickableButton>Search</ClickableButton>
-            <ClickableButton>Reset</ClickableButton>
+            <ClickableButton onClick={() => getMovie()}>Search</ClickableButton>
+            <ClickableButton onClick={() => setSearch("")}>
+              Reset
+            </ClickableButton>
           </div>
         </div>
       </section>
